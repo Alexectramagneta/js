@@ -1,7 +1,7 @@
+import { Badge } from "@/components/ui/badge";
 import { type AccountPlan, accountPlan } from "@3rdweb-sdk/react/hooks/useApi";
 import { Box, type CardProps, Flex } from "@chakra-ui/react";
 import {
-  Badge,
   Card,
   Heading,
   Text,
@@ -69,13 +69,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
               {plan.title}
             </Heading>
             {current && (
-              <Badge
-                borderRadius="md"
-                size="label.sm"
-                px={3}
-                py={1.5}
-                textTransform="capitalize"
-              >
+              <Badge className="rounded-md px-3 py-1.5 capitalize">
                 Current plan
               </Badge>
             )}

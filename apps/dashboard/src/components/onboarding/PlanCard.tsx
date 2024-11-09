@@ -1,5 +1,6 @@
+import { Badge } from "@/components/ui/badge";
 import { Flex, ListItem, UnorderedList } from "@chakra-ui/react";
-import { Badge, Card, Heading, LinkButton, Text } from "tw-components";
+import { Card, Heading, LinkButton, Text } from "tw-components";
 import type { CreditsRecord } from "./ApplyForOpCreditsModal";
 
 interface PlanCardProps {
@@ -12,13 +13,7 @@ export const PlanCard: React.FC<PlanCardProps> = ({ creditsRecord }) => {
       <Flex flexDir="column" gap={2}>
         <div>
           <Badge
-            borderRadius="full"
-            size="label.sm"
-            px={3}
-            bgColor={creditsRecord.color}
-            color="#fff"
-            textTransform="capitalize"
-            fontWeight="bold"
+            className={`font-bold text-white capitalize bg-[${creditsRecord.color}] rounded-full px-3`}
           >
             {creditsRecord.title}
           </Badge>

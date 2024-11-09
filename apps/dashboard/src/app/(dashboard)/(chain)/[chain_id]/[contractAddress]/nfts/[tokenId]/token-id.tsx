@@ -26,7 +26,7 @@ import type { ThirdwebContract } from "thirdweb";
 import { getNFT as getErc721NFT } from "thirdweb/extensions/erc721";
 import { getNFT as getErc1155NFT } from "thirdweb/extensions/erc1155";
 import { useReadContract } from "thirdweb/react";
-import { Badge, Button, Card, CodeBlock, Heading, Text } from "tw-components";
+import { Button, Card, CodeBlock, Heading, Text } from "tw-components";
 import { NFTMediaWithEmptyState } from "tw-components/nft-media";
 import { shortenString } from "utils/usedapp-external";
 import { NftProperty } from "../components/nft-property";
@@ -236,11 +236,7 @@ export const TokenIdPage: React.FC<TokenIdPageProps> = ({
                 <GridItem colSpan={4}>
                   <Heading size="label.md">Token Standard</Heading>
                 </GridItem>
-                <GridItem colSpan={8}>
-                  <Badge size="label.sm" variant="subtle">
-                    {nft.type}
-                  </Badge>
-                </GridItem>
+                <GridItem colSpan={8}>{nft.type}</GridItem>
                 {nft.type !== "ERC721" && (
                   <>
                     <GridItem colSpan={4}>
